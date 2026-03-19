@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>暖暖宝成长记录 | 专属小公主的美好时光</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+        }
+
+        /* 页面背景 */
+        body {
+            background: linear-gradient(120deg, #fef7fb 0%, #fcf1f7 100%);
+            color: #333;
+            padding-bottom: 50px;
+        }
+
+        /* 顶部标题栏 */
+        .header {
+            background: #ff9ecc;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 4px 15px rgba(255, 158, 204, 0.3);
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* 成长阶段容器 */
+        .growth-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 单个成长阶段样式 */
+        .growth-stage {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 20px rgba(255, 158, 204, 0.15);
+            transition: transform 0.3s ease;
+        }
+        .growth-stage:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 阶段标题 */
+        .stage-title {
+            color: #e86a92;
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .stage-title::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 22px;
+            background: #ff9ecc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+		/* 照片容器 - 调大显示范围 */
+		.photo-box {
+			width: 100%;
+			height: 400px;
+			max-width: 800px;
+			margin: 0 auto 15px;
+			border: 2px dashed #ffc2e0;
+			border-radius: 15px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			position: relative;
+		}
+		/* 照片占位提示 */
+		.photo-placeholder {
+			color: #ff9ecc;
+			text-align: center;
+			padding: 20px;
+		}
+		.photo-placeholder i {
+			font-size: 40px;
+			margin-bottom: 10px;
+			display: block;
+		}
+		/* 实际照片样式（适配大显示框） */
+		.photo-box img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 13px;
+		}
+
+		/* 移动端适配 */
+		@media (max-width: 768px) {
+			.header h1 {
+				font-size: 24px;
+			}
+			.growth-stage {
+				padding: 20px;
+			}
+			.stage-title {
+				font-size: 20px;
+			}
+			.photo-box {
+				height: 300px;
+				max-width: 100%;
+			}
+			.stage-desc {
+				font-size: 15px;
+			}
+		}
+        /* 阶段描述 */
+        .stage-desc {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+            text-indent: 2em;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 24px;
+            }
+            .growth-stage {
+                padding: 20px;
+            }
+            .stage-title {
+                font-size: 20px;
+            }
+            .photo-box {
+                height: 250px;
+            }
+            .stage-desc {
+                font-size: 15px;
+            }
+        }
+
+        /* 底部版权 */
+        .footer {
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+            margin-top: 40px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部标题 -->
+    <div class="header">
+        <h1>暖暖宝的成长时光</h1>
+        <p>记录小暖暖从出生到周岁的每一个美好瞬间 ✨</p>
+    </div>
+
+    <!-- 成长阶段容器 -->
+    <div class="growth-container">
+        <!-- 第一阶段：出生时刻 -->
+        <div class="growth-stage">
+            <h2 class="stage-title">✨ 初来乍到 · 新生的小可爱</h2>
+            <div class="photo-box">
+				<img src="images/born.jpg" alt="暖暖宝出生啦">
+            </div>
+            <p class="stage-desc">小暖暖刚出生时候的样子，脸蛋特别小，把你裹在小被子里面，特别可爱。</p>
+        </div>
+
+        <!-- 第二阶段：床上的笑容 -->
+        <div class="growth-stage">
+            <h2 class="stage-title">😊 萌趣日常 · 床上的治愈笑容</h2>
+            <div class="photo-box">
+			<img src="images/smile.jpg" alt="宝宝坐在床上笑" >
+            </div>
+            <p class="stage-desc">慢慢长大的你开始学会表达开心啦！坐在软软的小床上，听到爸爸妈妈的逗乐，就咧开小嘴咯咯笑，眼睛弯成了月牙儿。这个治愈的笑容，是家里最温暖的光。</p>
+        </div>
+
+        <!-- 第三阶段：柚子皮帽子 -->
+        <div class="growth-stage">
+            <h2 class="stage-title">🧢 搞怪瞬间 · 超萌柚子皮小帽</h2>
+            <div class="photo-box">
+			<img src="images/cute.jpg" alt="暖暖宝带柚皮帽照片">
+            </div>
+            <p class="stage-desc">解锁超萌新造型！头顶柚子皮小帽子。圆圆的脸蛋配上独特的“帽子”，好奇地东张西望，可爱值拉满，这是最特别的童年限定装扮啦～</p>
+        </div>
+
+        <!-- 第四阶段：周岁宴 -->
+        <div class="growth-stage">
+            <h2 class="stage-title">🎂 周岁快乐 · 专属小公主的派对</h2>
+            <div class="photo-box">
+			<img src="images/birthday.jpg" alt="暖暖宝出生啦">
+            </div>
+            <p class="stage-desc">小暖暖一周岁啦！穿上漂亮的小裙子，围着周岁蛋糕，在家人的祝福中抓周、吹蜡烛。这一年，你从襁褓里的小婴儿长成了会走会笑的小可爱，愿你永远健康快乐，平安顺遂。</p>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+         2026 暖暖宝成长记录 | 珍藏每一个可爱瞬间
+    </div>
+</body>
+</html>
